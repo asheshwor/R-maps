@@ -10,4 +10,6 @@ https://github.com/asheshwor/R-maps/blob/master/01_simple-map.R
 
 2. Great circle map
 ----------
-Points across the globe are connected using great circle arcs in this example. An excellent way to visualize global inter-connections.
+Points across the globe are connected using great circle arcs in this example. An excellent way to visualize global inter-connections. In this example, tourist arrival data for Nepal is visualized with colours representing the number of arrivales.
+
+![R plot](Plots/gcmap_nepal_tourist_2012.jpg)

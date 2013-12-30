@@ -5,3 +5,9 @@ This is a collection of R code for visualizing spatial data. The different types
 1. Simple country map with point data added
 ----------
 In this example, point data is mapped onto a country map.
+
+https://github.com/asheshwor/R-maps/blob/master/01_simple-map.R
+
+2. Great circle map
+----------
+Points across the globe are connected using great circle arcs in this example. An excellent way to visualize global inter-connections.

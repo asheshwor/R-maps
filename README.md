@@ -12,4 +12,10 @@ https://github.com/asheshwor/R-maps/blob/master/01_simple-map.R
 ----------
 Points across the globe are connected using great circle arcs in this example. An excellent way to visualize global inter-connections. In this example, tourist arrival data for Nepal is visualized with colours representing the number of arrivales.
 
+https://github.com/asheshwor/R-maps/blob/master/02_great-circle-map.R
+
 ![R plot](Plots/gcmap_nepal_tourist_2012.jpg)
+
+Another example of great circle map with internal work permits data:
+
+![R plot](Plots/gcmap_work_permits.jpg)

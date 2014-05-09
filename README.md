@@ -18,4 +18,4 @@ https://github.com/asheshwor/R-maps/blob/master/02_great-circle-map.R
 
 Another example of great circle map with international work permits data for Nepal. The figures have been extracted from pdf file at www.dofe.gov.np (in Nepali language) with minor edits on the name of countries.
 
-![R plot](Plots/gcmap_work_permits.jpg)
+![R plot](Plots/WorkPermitsNP2011.jpg)

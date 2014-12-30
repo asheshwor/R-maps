@@ -1,15 +1,7 @@
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #*     Load packages
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-# library(maps)
-# library(ggmap)
-# library(mapdata)
-# library(mapproj)
-# library(maptools)
 library(RColorBrewer)
-# library(classInt)
-# library(rgdal)
-# library(scales)
 library(rMaps)
 library(rCharts)
 library(plyr)
@@ -81,8 +73,8 @@ hist.df2 <- hist.df2[sample(1:nrow(hist.df2), nrow(hist.df2)),]
 hist.json <- ddply(hist.df2, .(lat, lon), summarise, count=length(id))
 #draw map
 leaf <- Leaflet$new()
-leaf$setView(c(-34.928649, 138.599993), 13) #-34.928649, 138.599993
-leaf$tileLayer(provider = "MapQuestOpen.OSM") #Stamen.Watercolor #MapQuestOpen.OSM
+leaf$setView(c(-34.928649, 138.599993), 13)
+leaf$tileLayer(provider = "MapQuestOpen.OSM")
 hist.json <- toJSONArray2(hist.json, json=F, names=F)
 leaf$addAssets(jshead = c(
   "http://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"

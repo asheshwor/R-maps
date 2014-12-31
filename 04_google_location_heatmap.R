@@ -1,7 +1,6 @@
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #*     Load packages
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-library(rMaps)
 library(rCharts)
 library(plyr)
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -38,16 +37,15 @@ getKMLcoordinates_01 <- function (kmlfile, ignoreAltitude = FALSE)
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #*       Setting up directory and files list
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-dirName <- "X:/History_full/2014/"
-fileList <- c(dir(dirName)) #files are not arranged according to date
-numFiles <- length(fileList)
+dirName <- "X:/History_full/2014/" #files for 2014 downloaded as 13 kml files
+fileList <- c(dir(dirName))
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #*       Extracting coordinates from KML
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 lat <- numeric(0)
 lon <- numeric(0)
 # WARNING!! may take a while to loop through
-for (i in 1:numFiles) {
+for (i in 1:length(fileList)) {
   dirTemp <- paste(dirName, fileList[i], sep="")
   hist <- getKMLcoordinates_01(dirTemp) #read KML file
   maxl <- length(hist)
@@ -61,13 +59,13 @@ hist.df2 <- data.frame(lon, lat)
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #*       Heatmap for location history
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-hist.df2$lon <- round(hist.df2$lon, 4)
+hist.df2$lon <- round(hist.df2$lon, 4) #optional
 hist.df2$lat <- round(hist.df2$lat, 4)
-hist.df2$id <- paste0(hist.df2$lon,"-", hist.df2$lat)
+hist.df2$id <- paste0(hist.df2$lon,"-", hist.df2$lat) #create identifier for each point
 #randomize rows (optional) so that the actual sequence of co-ordinates is not revealed
 hist.df2 <- hist.df2[sample(1:nrow(hist.df2), nrow(hist.df2)),]
 hist.json <- ddply(hist.df2, .(lat, lon), summarise, count=length(id))
-#draw map
+#draw leaflet map
 leaf <- Leaflet$new()
 leaf$setView(c(-34.928649, 138.599993), 13) #center map in Adelaide, South Australia
 leaf$tileLayer(provider = "MapQuestOpen.OSM")
@@ -86,3 +84,4 @@ L2$setTemplate(afterScript = sprintf("
 leaf
 #saving
 leaf$save("leafletmap.html", standalone=TRUE)
+#voila :)

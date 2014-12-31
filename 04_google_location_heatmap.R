@@ -1,7 +1,6 @@
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #*     Load packages
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-library(RColorBrewer)
 library(rMaps)
 library(rCharts)
 library(plyr)
@@ -45,9 +44,8 @@ numFiles <- length(fileList)
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #*       Extracting coordinates from KML
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-lat <- c(999)
-lon <- c(-999)
-fileIndex <- c(99)
+lat <- numeric(0)
+lon <- numeric(0)
 # WARNING!! may take a while to loop through
 for (i in 1:numFiles) {
   dirTemp <- paste(dirName, fileList[i], sep="")
@@ -59,8 +57,6 @@ for (i in 1:numFiles) {
     lon <- c(lon, hist.0[1])
   }
 }
-lat <- lat[-1]
-lon <- lon[-1]
 hist.df2 <- data.frame(lon, lat)
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #*       Heatmap for location history
@@ -68,16 +64,16 @@ hist.df2 <- data.frame(lon, lat)
 hist.df2$lon <- round(hist.df2$lon, 4)
 hist.df2$lat <- round(hist.df2$lat, 4)
 hist.df2$id <- paste0(hist.df2$lon,"-", hist.df2$lat)
+#randomize rows (optional) so that the actual sequence of co-ordinates is not revealed
 hist.df2 <- hist.df2[sample(1:nrow(hist.df2), nrow(hist.df2)),]
-#randomize rows
 hist.json <- ddply(hist.df2, .(lat, lon), summarise, count=length(id))
 #draw map
 leaf <- Leaflet$new()
-leaf$setView(c(-34.928649, 138.599993), 13)
+leaf$setView(c(-34.928649, 138.599993), 13) #center map in Adelaide, South Australia
 leaf$tileLayer(provider = "MapQuestOpen.OSM")
 hist.json <- toJSONArray2(hist.json, json=F, names=F)
-leaf$addAssets(jshead = c(
-  "http://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"
+#Using leaflet-heat plugin by Vladimir Agafonkin https://github.com/mourner
+leaf$addAssets(jshead = c("http://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"
 ))
 L2$setTemplate(afterScript = sprintf("
                                      <script>

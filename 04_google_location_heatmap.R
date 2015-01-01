@@ -67,7 +67,7 @@ hist.df2 <- hist.df2[sample(1:nrow(hist.df2), nrow(hist.df2)),]
 hist.json <- ddply(hist.df2, .(lat, lon), summarise, count=length(id))
 #draw leaflet map
 leaf <- Leaflet$new()
-leaf$setView(c(-34.928649, 138.599993), 13) #center map in Adelaide, South Australia
+leaf$setView(c(-34.928649, 138.599993), 13) #center map at Adelaide, South Australia
 leaf$tileLayer(provider = "MapQuestOpen.OSM")
 hist.json <- toJSONArray2(hist.json, json=F, names=F)
 #Using leaflet-heat plugin by Vladimir Agafonkin https://github.com/mourner

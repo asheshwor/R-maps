@@ -22,5 +22,5 @@ Another example of great circle map with international work permits data for Nep
 
 3. Dynamic heatmap using leaflet and leafletheat plugin
 ----------
-
+See example at http://asheshwor.com.np/host/heatmap.html
 ![Dynamic heatmap plot](Plots/heatmap4.jpg)

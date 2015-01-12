@@ -37,7 +37,7 @@ getKMLcoordinates_01 <- function (kmlfile, ignoreAltitude = FALSE)
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #*       Setting up directory and files list
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-dirName <- "X:/History_full/2014/" #files for 2014 downloaded as 13 kml files
+dirName <- "X:/History_full/2014/" #files for 2014 downloaded as kml files
 fileList <- c(dir(dirName))
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #*       Extracting coordinates from KML

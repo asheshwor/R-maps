@@ -24,3 +24,9 @@ Another example of great circle map with international work permits data for Nep
 ----------
 See example at http://asheshwor.com.np/host/heatmap.html
 ![Dynamic heatmap plot](Plots/heatmap4.jpg)
+
+4. Interactive maps using Cartographer package
+----------
+
+5. Interactive maps using Shiny - Leaflet integration
+----------

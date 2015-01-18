@@ -30,3 +30,6 @@ See example at http://asheshwor.com.np/host/heatmap.html
 
 5. Interactive maps using Shiny - Leaflet integration
 ----------
+
+5. ggmap square map plots
+----------

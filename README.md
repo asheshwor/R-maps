@@ -28,10 +28,10 @@ See example at http://asheshwor.com.np/host/heatmap.html
 4. Interactive maps using Cartographer package
 ----------
 See example at http://asheshwor.com.np/host/workpermits2011.html
-![Scaled circles showing number of international work permits issued by Department of Foreign Employment, Nepal in 2011 ](Plots/05_cartographer01.jpg)
+![Scaled circles showing number of international work permits issued by Department of Foreign Employment, Nepal in 2011 ](Plots/workpermits_1080.jpg)
 
 5. Interactive maps using Shiny - Leaflet integration
 ----------
 
-5. ggmap square map plots
+6. ggmap square map plots
 ----------

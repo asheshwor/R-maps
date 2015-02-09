@@ -30,6 +30,8 @@ See example at http://asheshwor.com.np/host/heatmap.html
 See example at http://asheshwor.com.np/host/workpermits2011.html
 ![Scaled circles showing number of international work permits issued by Department of Foreign Employment, Nepal in 2011 ](Plots/workpermits_1080.jpg)
 
+Code: 
+
 5. Interactive maps using Shiny - Leaflet integration
 ----------
 

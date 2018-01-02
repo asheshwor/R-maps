@@ -1,10 +1,9 @@
 #load packages
-require(tidyverse)
 require(ggmap)
 require(jsonlite)
 ##### 1. Read output from google takeout
-## location history from https://takeout.google.com/settings/takeout
-data.locationhistory <- fromJSON('X:/rdump/google/Location History/Location History.json')
+## get your location history from https://takeout.google.com/settings/takeout
+data.locationhistory <- fromJSON('X:/rdump/google/Takeout/Location History/Location History.json')
 ##### 2. Extract locations
 data.locationhistory <- data.locationhistory$locations #don't see any different
 # check columns and rows

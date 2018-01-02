@@ -40,5 +40,5 @@ See live example at: https://asheshwor.shinyapps.io/np-quake
 
 6. ggmap square map plots
 ----------
-Code example: https://github.com/asheshwor/R-maps/blob/05_ggmap_google_location.R
+Code example: https://github.com/asheshwor/R-maps/blob/master/05_ggmap_google_location.R
 ![ggmap plot example](Plots/ggmap_location_history.png)

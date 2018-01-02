@@ -30,7 +30,7 @@ Interactive maps using Cartographer package
 See example at http://asheshwor.com.np/host/workpermits2011.html
 ![Scaled circles showing number of international work permits issued by Department of Foreign Employment, Nepal in 2011 ](Plots/workpermits_1080.jpg)
 
-Code: 
+Code:
 
 5. Interactive maps using Shiny - Leaflet integration
 ----------
@@ -40,3 +40,5 @@ See live example at: https://asheshwor.shinyapps.io/np-quake
 
 6. ggmap square map plots
 ----------
+Code example: https://github.com/asheshwor/R-maps/blob/05_ggmap_google_location.R
+![ggmap plot example](Plots/ggmap_location_history.png)

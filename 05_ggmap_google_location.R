@@ -29,6 +29,8 @@ location.df <- location.df %>%
 #set colour
 couleur <- brewer.pal(9, "PuRd")
 adl <- "Adelaide, South Australia"
+##Google API authentication - new requirement
+register_google(key = "*********API KEY************")
 adl.map <- qmap(adl, zoom=15, maptype="terrain")
 adl.map + geom_point(aes(x = lon, y = lat), size=1,
                      data = location.df,

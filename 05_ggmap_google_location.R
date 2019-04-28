@@ -13,6 +13,7 @@ data.locationhistory <- data.locationhistory$locations
 # nrow(data.locationhistory)
 # lapply(data.locationhistory, class)
 #extract lon, lat and time components
+#the following is not working as the output from Google takeout seems to be messed up. Hope this is fixed soon. Substracting 4294967296 seem to work for lat. Lon already works for my subset which only had southern hemisphere data
 location.df <- data.frame(t = as.POSIXct(as.numeric(data.locationhistory$timestampMs) / 1000,
                                          origin = "1970-01-01"),
                           lon = as.numeric(data.locationhistory$longitudeE7/1E7),

@@ -1,6 +1,16 @@
-Mapping techniques in R
+R maps repo
 ---------
-This is a collection of R code for that I have been using for visualizing spatial data. Each of the different types of mapping techniques are briefly discussed below. As I explore more techniques, they will be added to the list.
+Welcome to my R maps repository!
+
+Here, you will find a collection of my maps created using R, samples of my personal mapmaking I enjoy doing as a hobby in my spare time.
+
+In this repository, you'll find a variety of my R map renditions, from simple depiction of locations to more complex plots and interactive maps. I am passionate about exploring and creating in the world of 3D graphics and animation, and R has become one of my favorite tools for spatial data visualization. Whether I'm filtering geographic data, designing visualization styles, or experimenting with new frameworks, I always strive to learn and improve my skills with each project.
+
+If you appreciate my work and would like to support me or collaborate on a project, please feel free to reach out to me via email at asheshwor at gmail. I am always open to new ideas and partnerships in the world of map-making, and any contributions or feedback are greatly appreciated.
+
+If you're interested in seeing more of my work, I invite you to visit my website at https://www.app.shrestha.au. There, you can find a wider variety of my personal and professional works, as well as my latest updates and projects.
+
+Thank you for visiting my repository, and I hope you enjoy my R maps creations!
 
 Simple country map with point data added
 ----------
